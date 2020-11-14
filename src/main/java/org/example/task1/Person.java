@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class Person {
 
+    private static final String DEFAULT_ADDRESS = "somewhere";
+
     private final String name;
     private final String surname;
 
@@ -38,7 +40,7 @@ public class Person {
     }
 
     public boolean hasAddress() {
-        return !address.equals("somewhere");
+        return !DEFAULT_ADDRESS.equals(address);
     }
 
     public void setAddress(String address) {
